@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', credentialsId: 'Git-private', url: 'https://github.com/sripriya7-ande/terraform_basic.git'
+                git branch: 'main', credentialsId: 'terraform-token', url: 'https://github.com/sripriya7-ande/terraform_basic.git'
             }
         }
         stage('Terraform Init') {
