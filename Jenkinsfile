@@ -22,7 +22,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 input message: 'Proceed with Terraform Apply?', ok: 'Apply'
-                sh 'terraform approve tfplan'
+                sh 'terraform apply -auto-approve tfplan'
             }
         }
         stage('Verify File Creation') {
