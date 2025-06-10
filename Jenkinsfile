@@ -27,8 +27,8 @@ pipeline {
         }
         stage('Verify File Creation') {
             steps {
-                sh 'ls -l $WORKSPACE/pets.txt || echo "File not found!"'
-                sh 'cat $WORKSPACE/pets.txt || echo "No content!"'
+                sh 'ls -l $WORKSPACE/pet.txt || echo "File not found!"'
+                sh 'cat $WORKSPACE/pet.txt || echo "No content!"'
             }
         }
     }
